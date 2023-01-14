@@ -31,16 +31,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define LOCKING_SUPPORT_ENABLE
 #define LOCKING_RESYNC_ENABLE
 
+/*This comment out are due to size of EEPROM
 #define BACKLIGHT_PIN B8
 #define BACKLIGHT_BREATHING
-
 #define WS2812_SPI SPID1
 #define WS2812_SPI_MOSI_PAL_MODE 5
 
 #define RGBLIGHT_ANIMATIONS
 
-#define RGBLED_NUM 4
 #define RGB_DI_PIN A7
+#define RGBLED_NUM 14
 #define DRIVER_LED_TOTAL RGBLED_NUM
 
 #define RGB_MATRIX_KEYPRESSES
+*/
+
+//For STM32F103C6T6A's EEPROM
+#define FEE_MCU_FLASH_SIZE 32
+#define FEE_PAGE_COUNT 2
+#define FEE_PAGE_SIZE 1024

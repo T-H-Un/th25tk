@@ -1,5 +1,4 @@
-/* Copyright 2020 QMK
- *
+/*
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 2 of the License, or
@@ -13,18 +12,20 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+#include QMK_KEYBOARD_H
 
 
-#pragma once
+enum th25tk_layers {
+  _L1,
+  _L2
+};
 
-#include_next <mcuconf.h>
-
-#undef STM32_PWM_USE_TIM1
-#define STM32_PWM_USE_TIM1 TRUE
-
-#undef STM32_SPI_USE_SPI1
-#define STM32_SPI_USE_SPI1 TRUE
-
-#undef STM32_PWM_USE_TIM4
-#define STM32_PWM_USE_TIM4 TRUE
-
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+  [_L1] = LAYOUT_all( /* Base */
+    KC_NUM,  KC_PSLS,  KC_PAST,  KC_PMNS,    KC_F1,
+    KC_P7,   KC_P8,    KC_P9,    KC_PPLS,    KC_F2,
+    KC_P4,   KC_P5,    KC_P6,    KC_BSLS,    KC_F3,
+    KC_P1,   KC_P2,    KC_P3,    KC_ENT,     KC_F4,
+    KC_COMM, KC_0,     KC_PDOT,  KC_SPACE,   KC_F5
+    )
+};
