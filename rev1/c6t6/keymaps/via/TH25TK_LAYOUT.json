@@ -1,6 +1,6 @@
 {
     "name": "TH25TK Prototype",
-  "vendorId": "0xFEED",
+  "vendorId": "FEED",
   "productId": "0x1000",
   "lighting": "qmk_rgblight",
   "matrix": { "rows": 5, "cols": 5 },
