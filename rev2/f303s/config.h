@@ -21,10 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MANUFACTURER    T-H-Un
 #define PRODUCT         TH25TK Prototype
 
-
-
-#define UNUSED_PINS
-#define DIODE_DIRECTION COL2ROW
+#define DIRECT_PINS {{A8,A3,A4,A5,A2},{A15,B3,B4,B5,C13},{C14,C15,B13,A6,B0},{B1,B2,B10,A10,A9},{B15,B14,B12,A1,A0}}
 
 #define DEBOUNCE 5
 #define LOCKING_SUPPORT_ENABLE
@@ -39,11 +36,21 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define WS2812_SPI SPID1
 #define WS2812_SPI_MOSI_PAL_MODE 5
 
-#define RGBLIGHT_ANIMATIONS
+#define RGBLIGHT_EFFECT_BREATHING
+#define RGBLIGHT_EFFECT_RAINBOW_MOOD
+#define RGBLIGHT_EFFECT_RAINBOW_SWIRL
+#define RGBLIGHT_EFFECT_SNAKE
+#define RGBLIGHT_EFFECT_KNIGHT
+#define RGBLIGHT_EFFECT_CHRISTMAS
+#define RGBLIGHT_EFFECT_STATIC_GRADIENT
+#define RGBLIGHT_EFFECT_RGB_TEST
+#define RGBLIGHT_EFFECT_ALTERNATING
+#define RGBLIGHT_EFFECT_TWINKLE
 
-#define RGBLED_NUM 4
+#define RGBLED_NUM 8
 #define RGB_DI_PIN A7
 #define DRIVER_LED_TOTAL RGBLED_NUM
+#define RGBLED_SPLIT {4, 4}
 
 #define RGB_MATRIX_KEYPRESSES
 
@@ -56,5 +63,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define SERIAL_USART_DRIVER SIOD1
 #define SERIAL_USART_TX_PAL_MODE 7
 #define SPLIT_USB_DETECT
-#define SERIAL_DEBUG
 

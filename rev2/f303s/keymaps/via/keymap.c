@@ -51,10 +51,3 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_COMM, KC_P0,    KC_PDOT,  KC_ENT,     KC_F5,KC_P1,   KC_P2,    KC_P3,    KC_SPACE,   MO(_L4)
     ),
 };
-void keyboard_post_init_user(void) {
-  // Customise these values to desired behaviour
-  debug_enable=true;
-  debug_matrix=true;
-  //debug_keyboard=true;
-  //debug_mouse=true;
-}

@@ -21,7 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MANUFACTURER    T-H-Un
 #define PRODUCT         TH25TK Prototype
 
-#define DIRECT_PINS {{A8,A3,A4,A5,A2},{A15,B3,B4,B5,C13},{C14,C15,B13,A6,B0},{B1,B2,B10,A10,A9},{B15,B14,B13,A1,A0}}
+#define DIRECT_PINS {{A8,A3,A4,A5,A2},{A15,B3,B4,B5,C13},{C14,C15,B13,A6,B0},{B1,B2,B10,A10,A9},{B15,B14,B12,A1,A0}}
 
 #define DEBOUNCE 5
 #define LOCKING_SUPPORT_ENABLE
