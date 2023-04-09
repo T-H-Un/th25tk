@@ -1,8 +1,8 @@
 {
-    "name": "TH25TK Prototype",
+    "name": "TH25TK C6T6A",
   "vendorId": "FEED",
-  "productId": "0x1000",
-  "lighting": "qmk_rgblight",
+  "productId": "0x1600",
+  "lighting": "none",
   "matrix": { "rows": 5, "cols": 5 },
   "layouts": {
     "labels": [
