@@ -13,6 +13,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include QMK_KEYBOARD_H
+#define HOLD_ON_OTHER_KEY_PRESS
 
 enum th25tkjp_layers {
   _L1,

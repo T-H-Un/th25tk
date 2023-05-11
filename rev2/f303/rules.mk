@@ -27,5 +27,6 @@ NKRO_ENABLE = yes           # Enable N-Key Rollover
 AUDIO_ENABLE = no
 RGBLIGHT_ENABLE = yes   # Enable keyboard underlight functionality
 LEADER_ENABLE = yes
+ENCODER_ENABLE=yes
 
 LAYOUT=LAYOUT_all LAYOUT_tk

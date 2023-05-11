@@ -14,13 +14,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #pragma once
-#include "config_common.h"
-#define VENDOR_ID       0xFEED
-#define PRODUCT_ID      0x1000
-#define DEVICE_VER	0x0001
-#define MANUFACTURER    T-H-Un
-#define PRODUCT         TH25TK Prototype
-
 #define MATRIX_ROWS 5
 #define MATRIX_COLS 5
 #define MATRIX_ROW_PINS { A8, A2, B13, B2, B10 }
@@ -40,7 +33,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define WS2812_SPI SPID1
 #define WS2812_SPI_MOSI_PAL_MODE 5
 
-#define RGBLIGHT_ANIMATIONS
+#define RGBLIGHT_EFFECT_BREATHING
+#define RGBLIGHT_EFFECT_RAINBOW_MOOD
+#define RGBLIGHT_EFFECT_RAINBOW_SWIRL
+#define RGBLIGHT_EFFECT_SNAKE
+#define RGBLIGHT_EFFECT_KNIGHT
+#define RGBLIGHT_EFFECT_CHRISTMAS
+#define RGBLIGHT_EFFECT_STATIC_GRADIENT
+#define RGBLIGHT_EFFECT_RGB_TEST
+#define RGBLIGHT_EFFECT_ALTERNATING
+#define RGBLIGHT_EFFECT_TWINKLE
 
 #define RGBLED_NUM 4
 #define RGB_DI_PIN A7

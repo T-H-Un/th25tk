@@ -23,31 +23,53 @@ enum th25tkjp_layers {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_L1] = LAYOUT_all( /* Base */
-    KC_NUM,  KC_PSLS,  KC_PAST,  KC_PMNS,    MO(_L1),
-    KC_P7,   KC_P8,    KC_P9,    KC_BSLS,    MO(_L2),
+    KC_NUM,  KC_PSLS,  KC_PAST,  KC_PMNS,    MO(_L1), KC_VOLU,
+    KC_P7,   KC_P8,    KC_P9,    KC_BSLS,    MO(_L2), KC_VOLD,
     KC_P4,   KC_P5,    KC_P6,    KC_PPLS,    MO(_L3),
     KC_P1,   KC_P2,    KC_P3,    KC_SPACE,   MO(_L4),
     KC_COMM, KC_P0,    KC_PDOT,  KC_ENT,     KC_F5
     ),
   [_L2] = LAYOUT_all(
-    KC_NUM,  KC_PSLS,  KC_PAST,  KC_PMNS,    MO(_L1),
-    KC_P7,   KC_P8,    KC_P9,    KC_BSLS,    MO(_L2),
+    KC_NUM,  KC_PSLS,  KC_PAST,  KC_PMNS,    MO(_L1), KC_VOLU,
+    KC_P7,   KC_P8,    KC_P9,    KC_BSLS,    MO(_L2), KC_VOLD,
     KC_P4,   KC_P5,    KC_P6,    KC_PPLS,    MO(_L3),
     KC_P1,   KC_P2,    KC_P3,    KC_SPACE,   MO(_L4),
     KC_COMM, KC_P0,    KC_PDOT,  KC_ENT,     KC_F5
     ),
   [_L3] = LAYOUT_all( 
-    KC_NUM,  KC_PSLS,  KC_PAST,  KC_PMNS,    MO(_L1),
-    KC_P7,   KC_P8,    KC_P9,    KC_BSLS,    MO(_L2),
+    KC_NUM,  KC_PSLS,  KC_PAST,  KC_PMNS,    MO(_L1), KC_VOLU,
+    KC_P7,   KC_P8,    KC_P9,    KC_BSLS,    MO(_L2), KC_VOLD,
     KC_P4,   KC_P5,    KC_P6,    KC_PPLS,    MO(_L3),
     KC_P1,   KC_P2,    KC_P3,    KC_SPACE,   MO(_L4),
     KC_COMM, KC_P0,    KC_PDOT,  KC_ENT,     KC_F5
     ),
   [_L4] = LAYOUT_all(
-    KC_NUM,  KC_PSLS,  KC_PAST,  KC_PMNS,    MO(_L1),
-    KC_P7,   KC_P8,    KC_P9,    KC_BSLS,    MO(_L2),
+    KC_NUM,  KC_PSLS,  KC_PAST,  KC_PMNS,    MO(_L1), KC_VOLU,
+    KC_P7,   KC_P8,    KC_P9,    KC_BSLS,    MO(_L2), KC_VOLD,
     KC_P4,   KC_P5,    KC_P6,    KC_PPLS,    MO(_L3),
     KC_P1,   KC_P2,    KC_P3,    KC_SPACE,   MO(_L4),
     KC_COMM, KC_P0,    KC_PDOT,  KC_ENT,     KC_F5
     ),
 };
+#if defined(ENCODER_ENABLE)
+bool encoder_update_user(uint8_t index, bool clockwise){
+  keypos_t key;
+  if(index==0){
+    if(clockwise){
+      key.row=5,key.col=1;
+    }else{
+      key.row=5,key.col=0;
+    }
+    tap_code(keymap_key_to_keycode(layer_switch_get_layer(key),key));
+  }
+  return false;
+}
+#endif
+#if defined(ENCODER_MAP_ENABLE)
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
+    [_L1] =   { ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
+    [_L2] =  { ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
+    [_L3] =  { ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
+    [_L4] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+};
+#endif
