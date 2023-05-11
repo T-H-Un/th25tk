@@ -21,12 +21,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MANUFACTURER    T-H-Un
 #define PRODUCT         TH25TK Prototype
 
-#define DIRECT_PINS {{A8,A3,A4,A5,A2},{A15,B3,B4,B5,C13},{C14,C15,B13,A6,B0},{B1,B2,B10,A10,A9},{B15,B14,B12,A1,A0}}
-
+#define DIRECT_PINS {{A15,B3,B9,C14,A0},{A10,B4,C13,C15,A1},{A9,A5,A2,A4,A3},{A8,B13,B11,B2,B0},{B15,B14,B12,B10,B1}}
+#define ENCODERS_PAD_A { B7 }
+#define ENCODERS_PAD_B { B5 }
+/*
 #define DEBOUNCE 5
 #define LOCKING_SUPPORT_ENABLE
 #define LOCKING_RESYNC_ENABLE
-
+*/
 /*This comment out are due to size of EEPROM
 #define BACKLIGHT_PIN B8
 #define BACKLIGHT_BREATHING

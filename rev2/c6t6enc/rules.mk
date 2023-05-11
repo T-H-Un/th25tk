@@ -5,7 +5,6 @@
 MCU = STM32F103
 #BOARD = genericSTM32F103C8
 
-##Change for STM32F103C6T6A
 # Bootloader selection
 OPT_DEFS += -DBOOTLOADER_STM32DUINO
 MCU_LDSCRIPT = STM32F103x6_stm32duino_bootloader
@@ -17,9 +16,6 @@ DFU_SUFFIX_ARGS = -v 1EAF -p 0003
 LTO_ENABLE = yes
 #Enable EEPROM emuration for STM32F103C6T6A
 EEPROM_DRIVER = vendor
-
-# Use SPI for RGB underglow:
-WS2812_DRIVER = spi
 
 # Build Options
 #   change yes to no to disable
@@ -34,13 +30,10 @@ NKRO_ENABLE = yes           # Enable N-Key Rollover
 AUDIO_ENABLE = no
 RGBLIGHT_ENABLE = no   # Enable keyboard underlight functionality
 LEADER_ENABLE = yes
-SPACE_CADET_ENABLE = no
-GRAVE_ESC_ENABLE = no
-MAGIC_ENABLE = no
-
+BACKLIGHT_DRIVER = pwm
+ENCODER_ENABLE = yes
+ENCODER_MAP_ENABLE = yes
 
 OPT_DEFS += -DCORTEX_ENABLE_WFI_IDLE=TRUE
 
 LAYOUT=LAYOUT_all LAYOUT_tk
-
-
