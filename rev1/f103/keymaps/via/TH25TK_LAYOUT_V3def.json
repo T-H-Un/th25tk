@@ -2,7 +2,7 @@
   "name": "TH25TK Prototype",
   "vendorId": "FEED",
   "productId": "0x1000",
-  "menus": ["qmk_backlight_rgblight","qmk_backlight"],
+  "menus": ["qmk_backlight_rgblight"],
   "keycodes": ["qmk_lighting"],
   "matrix": { "rows": 5, "cols": 5 },
   "layouts": {
